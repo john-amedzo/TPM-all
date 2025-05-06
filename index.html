@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head section of the web page -->
+<head>
+    <!-- The character set that the web page would use -->
+  <meta charset="utf-8" />
+  <!-- Screen size behaviour of the page -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Page description -->
+  <meta name="description" content="An ultra-modern fashion design company" />
+  <!-- Auther/site owner information -->
+  <meta name="author" content="Zee" />
+  <!-- Title of the page. 
+   This is what you see at the top of the page as 
+   the name of the website in the tab menu. -->
+  <title>Zee's Place | Zee's Fashion Design</title>
+  <!-- A link to the file containing all the styles for the page (ie., colors and more) -->
+  <link href="./assets/css/styles.css" rel="stylesheet" />
+</head>
+
+<!-- Here's the body of the page where users will be able to see and interact with 
+ (NB: the <head> section is for the browser, not the user/viewer) -->
+<body>
+
+    <!-- Header here -->
+  <div id="header-container"></div>
+
+  <!-- Background image -->
+  <div class="image-bg-container">
+    <!-- Header and paragraph for the hero section -->
+    <h1 class="hero-text">
+      Welcome to Zee's Place 
+    </h1>
+    <p class="hero-description">
+        Your Vision, Our Design.
+    </p>
+  </div>
+
+  <!-- Footer here -->
+
+  <div id="footer-container"></div>
+
+
+  
+  <!-- ------------------------------------------------ -->
+
+  <!-- Javascripts to make the page interactive -->
+   <!-- Header script to link it to the header.html file within the components folder -->
+  <script>
+      fetch('./components/header.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('header-container').innerHTML = data;
+        });
+  </script>
+
+     <!-- Script to toggle the header menu  -->
+  <script>
+    function toggleMenu() {
+      const links = document.getElementById("nav-links");
+      links.classList.toggle("active");
+    }
+  </script>
+  
+   <!-- Footer script to link it to the header.html file within the components folder -->
+   <script>
+    fetch('./components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .navbar a {
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+  }
+  
+  .toggle-button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      background: rgba(0, 0, 0, 0.85);
+      position: absolute;
+      top: 60px;
+      right: 0;
+      padding: 1rem;
+      width: 100%;
+    }
+  
+    .navbar-links.active {
+      display: flex;
+    }
+  
+    .toggle-button {
+      display: block;
+    }
+  }
+  
+  .image-bg-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url('../images/Thread_and_Scissors.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .image-bg-container::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* semi-transparent overlay */
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .hero-text {
+    position: absolute;
+    bottom: 40%;
+    left: 5%;
+    color: white;
+    font-size: 64px;
+    z-index: 2;
+    max-width: 80%;
+  }
+
+  .hero-description {
+    position: absolute;
+    bottom: 35%;
+    left: 5%;
+    color: white;
+    font-size: 24px;
+    z-index: 2;
+    max-width: 80%;
+  }
+  
+  /* Footer Styles */
+  .site-footer {
+    background-color: #222;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  .social-icons a {
+    margin: 0 0.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  .social-icons a:hover {
+    color: #f39c12; 
+  }
+  
+  
